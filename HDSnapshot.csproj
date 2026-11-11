@@ -2,15 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>latest</LangVersion>
-    <Version>1.0.0</Version>
     <AssemblyName>HDSnapshot</AssemblyName>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <GameRoot Condition="'$(GameRoot)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\'))\</GameRoot>
-    <AssemblySearchPaths>{HintPathFromItem};{RawFileName}</AssemblySearchPaths>
+    <Version>1.0.0</Version>
+    <GameRoot Condition="'$(GameRoot)' == ''">$(MSBuildThisFileDirectory)..\..\..\</GameRoot>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Plugin\*.cs" />
-    <EmbeddedResource Include="Assets\camera-icon.png" Condition="Exists('Assets\camera-icon.png')" />
+    <EmbeddedResource Include="Assets\camera-icon.png" LogicalName="camera-icon.png" />
     <Reference Include="BepInEx"><HintPath>$(GameRoot)BepInEx\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Foundation"><HintPath>$(GameRoot)BepInEx\plugins\Foundation\Foundation.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="0Harmony"><HintPath>$(GameRoot)BepInEx\core\0Harmony.dll</HintPath><Private>false</Private></Reference>

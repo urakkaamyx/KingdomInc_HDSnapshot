@@ -1,45 +1,54 @@
-# HD Snapshot 1.0.0
+# HD Snapshot
 
-[Nexus Mods page](https://www.nexusmods.com/kingdominc/mods/20)
+[GitHub releases](https://github.com/urakkaamyx/KingdomInc_HDSnapshot/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/20) · Version 1.0.0
 
-Take crystal-clear, high-definition snapshots of your Kingdom Inc workshop layouts.
+High-definition box selection and panoramic offscreen screenshot capture for Kingdom Inc workshop flows.
 
-In the standard game, zooming out to capture a large factory shrinks machines to tiny sub-pixel clusters, aliases pipe connections, and blurs TextMeshPro text into unreadable smudges. **HD Snapshot** provides a dedicated box selection tool that scans the selected area at native close-up zoom (1:1 pixel scale, or 2x Ultra-HD supersampling) and stitches it into a pristine, high-resolution PNG image where every single card, text label, recipe icon, and pipe remains razor-sharp.
+Capture any section of your factory or your entire workshop layout in crisp, ultra-high-definition detail without screen resolution or GPU texture limits.
 
 ## Features
 
-- **Box Selection Tool**: Click the camera icon in the edit hotbar or press **F9** to enter snapshot mode. Drag a rectangular box across any section of your factory. Live dimension and resolution counters show the exact width and height in pixels.
-- **One-Click Factory Capture**: Press **Space** or **Enter** while the tool is active to automatically frame and capture your entire factory layout with clean padding.
-- **True HD Offscreen Tiling**: Does not upscale a zoomed-out screen. The camera renders offscreen tiles at 1:1 close-up zoom with point-filtered text and full font clarity, stitching large areas seamlessly without exceeding GPU texture limits.
-- **Instant Clipboard Paste**: Automatically copies the high-resolution image (and file path) to your Windows clipboard so you can press **Ctrl+V** straight into Discord, Reddit, Slack, or image editors.
-- **Direct PNG Export**: Saves full-quality PNGs directly into your game's `Screenshots/` directory (`KingdomInc/Screenshots/`).
-- **Foundation Integration**: Full in-game configuration menu under **Options -> Mod Settings -> HD Snapshot** (Resolution scale 1.0x / 1.5x / 2.0x, Background style: Workshop Grid / Transparent PNG / Dark Slate, auto-open folder, hotkey).
+- **Box Selection Capture:** Drag-and-drop box selection tool to frame and capture any area of your workshop.
+- **1:1 Close-Up & 2x Supersampling:** Emulates native close-up camera zoom with crisp TextMeshPro text and point-filtered font rendering.
+- **Offscreen Tiled Rendering:** Renders seamlessly in memory across multiple tiles, bypassing GPU texture limits and avoiding VRAM exhaustion.
+- **Instant Clipboard Export:** Automatically copies captured image bitmaps directly to the Windows clipboard for instant pasting into Discord, Reddit, or image editors.
+- **Automatic PNG File Saving:** Automatically saves full-resolution PNG files to your game's `Screenshots/` directory.
+- **Foundation Settings Integration:** Configure resolution scale, hotkey bindings, background style (Workshop Grid, Transparent PNG, or Dark Slate), and folder auto-open through Foundation.
 
-## Controls
+## Usage and Controls
 
-| Action | Control |
-| --- | --- |
-| Activate Snapshot Tool | Click Hotbar Camera Button or press **F9** |
-| Box Select Area | Left Click & Drag |
-| Capture Entire Factory | Press **Space** or **Enter** while tool is active |
-| Cancel Selection | Press **Escape** or **Right Click** |
+1. Open any workshop flow diagram.
+2. Click the camera icon in the bottom-left edit hotbar or press **F9**.
+3. **Box Select:** Left-click and drag across any area of your workshop. A live dimensions badge displays pixel size and extent.
+4. **Capture All:** Press **Space** or **Enter** while the tool is active to automatically frame and capture your entire factory with clean margins.
+5. **Cancel:** Press **Escape** or **Right-Click** to cancel selection.
 
-## Requirements and installation
+## Requirements
 
-Requires Kingdom Inc, BepInEx 5 (Windows x64 Mono), and optionally **Foundation 0.5.0 or later** for in-game mod settings.
+- Kingdom Inc (Windows x64 Mono)
+- [BepInEx 5](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.6) (5.4.23.6 or newer)
+- [Foundation](https://www.nexusmods.com/kingdominc/mods/18) (0.11.0 or newer)
 
-1. Install BepInEx 5 and optionally Foundation.
-2. Close Kingdom Inc.
-3. Extract the HD Snapshot ZIP so `HDSnapshot.dll` is located at `BepInEx/plugins/HDSnapshot/HDSnapshot.dll`.
-4. Launch Kingdom Inc. The camera icon appears in your edit hotbar when viewing any workshop flow diagram.
+## Installation
 
-## Updating and removal
+1. Install BepInEx 5 for Kingdom Inc.
+2. Install Foundation (0.11.0 or newer).
+3. Extract the release ZIP into your Kingdom Inc game directory.
+4. Verify the file exists at `BepInEx/plugins/HDSnapshot/HDSnapshot.dll`.
+5. Launch the game and enter any workshop to use the camera tool!
 
-Close the game before replacing `HDSnapshot.dll`.
+## Compatibility
 
-HD Snapshot is a client-side visual utility. It does not alter your save files or introduce custom entities into save data. To remove it, simply close the game and delete the `BepInEx/plugins/HDSnapshot` folder. Your saves will load normally.
+No Harmony patches or native method hooks are used. HD Snapshot operates entirely via Unity GameObject lifecycle, native UI button attachment, and offscreen camera rendering.
 
-Author: Urakka.
+- **Non-destructive:** Does not modify game save data, factory simulation, or kingdom state.
+- **Save file safe:** Safe to install or remove at any time without impacting worlds or saves.
+- **UI integration:** Seamlessly attaches to the workshop editing toolbar alongside vanilla tools and other UI mods.
 
-[Source code](https://github.com/urakkaamyx/KingdomInc_HDSnapshot)
+## Removal
 
+Close the game and delete `BepInEx/plugins/HDSnapshot/`.
+
+## Credits and Source
+
+Created by **Urakka** (rockyamyx). [Source code on GitHub](https://github.com/urakkaamyx/KingdomInc_HDSnapshot). Game artwork belongs to its respective owners.

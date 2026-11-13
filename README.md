@@ -1,6 +1,8 @@
 # HD Snapshot
 
-[GitHub releases](https://github.com/urakkaamyx/KingdomInc_HDSnapshot/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/20) · Version 1.0.0
+**Current release: 1.0.1 — for Kingdom Inc game version 1.0.14.**
+
+[GitHub releases](https://github.com/urakkaamyx/KingdomInc_HDSnapshot/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/20) · Version 1.0.1
 
 High-definition box selection and panoramic offscreen screenshot capture for Kingdom Inc workshop flows.
 
@@ -27,12 +29,12 @@ Capture any section of your factory or your entire workshop layout in crisp, ult
 
 - Kingdom Inc (Windows x64 Mono)
 - [BepInEx 5](https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.6) (5.4.23.6 or newer)
-- [Foundation](https://www.nexusmods.com/kingdominc/mods/18) (0.11.0 or newer)
+- [Foundation](https://www.nexusmods.com/kingdominc/mods/18) (0.14.0 or newer)
 
 ## Installation
 
 1. Install BepInEx 5 for Kingdom Inc.
-2. Install Foundation (0.11.0 or newer).
+2. Install Foundation (0.14.0 or newer).
 3. Extract the release ZIP into your Kingdom Inc game directory.
 4. Verify the file exists at `BepInEx/plugins/HDSnapshot/HDSnapshot.dll`.
 5. Launch the game and enter any workshop to use the camera tool!

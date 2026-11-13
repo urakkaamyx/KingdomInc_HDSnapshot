@@ -2,7 +2,7 @@
 
 **Current release: 1.0.1 — for Kingdom Inc game version 1.0.14.**
 
-[GitHub releases](https://github.com/urakkaamyx/KingdomInc_HDSnapshot/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/20) · Version 1.0.1
+[GitHub releases](https://github.com/KingdomIncModding/KingdomInc_HDSnapshot/releases) · [Nexus Mods](https://www.nexusmods.com/kingdominc/mods/20) · Version 1.0.1
 
 High-definition box selection and panoramic offscreen screenshot capture for Kingdom Inc workshop flows.
 
@@ -53,4 +53,4 @@ Close the game and delete `BepInEx/plugins/HDSnapshot/`.
 
 ## Credits and Source
 
-Created by **Urakka** (rockyamyx). [Source code on GitHub](https://github.com/urakkaamyx/KingdomInc_HDSnapshot). Game artwork belongs to its respective owners.
+Created by **Urakka** (rockyamyx). [Source code on GitHub](https://github.com/KingdomIncModding/KingdomInc_HDSnapshot). Game artwork belongs to its respective owners.
